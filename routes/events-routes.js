@@ -3,7 +3,7 @@ let router = express.Router()
 const events = require('../models/events')
 
 
-router.route('/',).get((req,res)=>{
+router.route('/').get((req,res)=>{
     events.find((err,data)=>{
         if(err){
             return next(err)
