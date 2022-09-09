@@ -1,21 +1,6 @@
 let express = require('express');
-const {nextTick} = require ('process');
-const app = express();
 let router = express.Router()
 const bookService = require('../models/bookService')
-const cors = require('cors');
-
-var whiteList = ['http://localhost:4200/bookService', 'http://localhost:4000/bookService'];
-corsOption ={
-    origin: function(origin, callback){
-        if(whiteList.includes(origin) !== -1){
-            callback(null, true)
-        }else{
-            callback(new Error('Not allowed by Cors'))
-        }
-    }
-}
-
 
 router.route('/',).get((req,res)=>{
     bookService.find((err,data)=>{

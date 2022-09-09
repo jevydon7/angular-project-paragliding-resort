@@ -1,9 +1,6 @@
 let express = require('express');
-const {nextTick} = require ('process');
-const app = express();
 let router = express.Router()
 const User = require('../models/user')
-const cors = require('cors');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const jwtKey = "my_secret_key"

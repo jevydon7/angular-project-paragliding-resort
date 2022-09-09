@@ -1,20 +1,7 @@
 let express = require('express');
-const {nextTick} = require ('process');
-const app = express();
 let router = express.Router()
 const user = require('../models/user');
 const bcrypt = require('bcrypt');
-
-// var whiteList = ['http://localhost:4200/events', 'http://localhost:4000/events'];
-// corsOption ={
-//     origin: function(origin, callback){
-//         if(whiteList.includes(origin) !== -1){
-//             callback(null, true)
-//         }else{
-//             callback(new Error('Not allowed by Cors'))
-//         }
-//     }
-// }
 
 
 router.route('/',).get((req,res)=>{
