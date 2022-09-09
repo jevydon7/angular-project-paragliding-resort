@@ -4,6 +4,7 @@ const user = require('../models/user');
 const bcrypt = require('bcrypt');
 
 
+
 router.route('/',).get((req,res)=>{
     user.find((err,data)=>{
         if(err){
