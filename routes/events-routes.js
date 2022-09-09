@@ -2,7 +2,7 @@ let express = require('express');
 const {nextTick} = require ('process');
 const app = express();
 let router = express.Router()
-const events = require('../models/events')
+const events = require('../')
 const cors = require('cors');
 
 var whiteList = ['http://localhost:4200/events', 'http://localhost:4000/events'];
