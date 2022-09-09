@@ -9,7 +9,7 @@ const userRoute = require("./routes/user-routes")
 const auth = require("./routes/auth")
 const bookingRoute = require("./routes/booking-routes")
 
-mongoose.connect('mongodb://127.0.0.1:27017/userdata').then((x) => {
+mongoose.connect(process.env.MONGODB_URL).then((x) => {
     console.log(`connected to database "${x.connections[0].name}"`)
     }).catch((err) => {
     console.error('error connecting db', err.reason)    
